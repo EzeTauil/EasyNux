@@ -86,7 +86,7 @@ while true; do
             ;;
         6)
             echo -e "${BLUE}Buscando actualizaciones de EasyNux...${NC}"
-            bash ./MODULOS/actualizar-easynux.sh
+            bash ./MODULOS/EasyNuxUP.sh
             echo -ne "${GREEN}Presiona Enter para volver al menú...${NC}"
             read
             ;;
