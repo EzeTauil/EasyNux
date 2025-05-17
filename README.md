@@ -53,6 +53,11 @@ EasyNux/
 │   ├── comandos.sh
 │   └── EasyNuxUP.sh
 ```
+Sistema de actualizaciones
+
+EasyNux detecta si hay cambios locales en los archivos antes de realizar una actualización desde GitHub. Si hay modificaciones en los scripts locales, se le pregunta al usuario si desea forzar la actualización (sobrescribiendo los cambios) o cancelar la operación para conservar su versión actual.
+
+Esto protege la integridad de los datos del usuario, pero permite mantener EasyNux siempre actualizado con un simple clic.
 
 ## Créditos
 
