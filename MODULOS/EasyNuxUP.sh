@@ -16,7 +16,7 @@ sleep 1
 if [ -d .git ]; then
     echo -e "${GREEN}Repositorio Git detectado.${RESET}"
 
-    # ¿Hay archivos modificados localmente?
+    
     if [[ -n $(git status --porcelain) ]]; then
         echo -e "${RED}Se detectaron cambios locales en tu copia de EasyNux.${RESET}"
         echo ""
