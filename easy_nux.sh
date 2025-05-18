@@ -133,7 +133,7 @@ menu_seguridad() {
 }
 
 
-# === MENÚ PRINCIPAL NUEVO ===
+# === MENÚ PRINCIPAL ===
 while true; do
     mostrar_banner
     echo -e "${BLUE}==================================================${NC}"
