@@ -2,11 +2,8 @@
 
 # Creado por BlackSec
 
-# === COLORES ===
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-RED='\033[0;31m'
-NC='\033[0m' 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$SCRIPT_DIR/common.sh"
 
 clear
 echo -e "${YELLOW}Instalación de componentes esenciales:${NC}"

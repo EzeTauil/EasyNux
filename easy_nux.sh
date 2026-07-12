@@ -2,16 +2,9 @@
 
 # Creado por BlackSec
 
-# === COLORES ===
-GREEN="\e[1;32m"
-BLUE="\e[1;34m"
-RED="\e[1;31m"
-YELLOW="\e[1;33m"
-CYAN="\e[1;36m"
-PURPLE="\e[1;35m"
-GRAY="\e[1;30m"
-WHITE="\e[1;37m"
-NC='\033[0m'
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+MODULOS_DIR="$SCRIPT_DIR/MODULOS"
+source "$MODULOS_DIR/common.sh"
 
 # === MOSTRAR BANNER ===
 mostrar_banner() {
@@ -43,15 +36,13 @@ menu_gamer() {
         read subopcion
 
         case $subopcion in
-            1) bash ./MODULOS/optlinuxV2.sh ;;
-            2) bash ./MODULOS/inststeam.sh ;;
-            3) bash ./MODULOS/instdiscord.sh ;;
-            4) bash ./MODULOS/instobs.sh ;;
-            5) bash ./MODULOS/instgimp.sh ;;
-            6) bash ./MODULOS/instkdenlive.sh ;;
+            1) bash "$MODULOS_DIR/optlinuxV2.sh" ;;
+            2) bash "$MODULOS_DIR/inststeam.sh" ;;
+            3) bash "$MODULOS_DIR/instdiscord.sh" ;;
+            4) bash "$MODULOS_DIR/instobs.sh" ;;
+            5) bash "$MODULOS_DIR/instgimp.sh" ;;
+            6) bash "$MODULOS_DIR/instkdenlive.sh" ;;
             7) break ;;
-
-            4) break ;;
             *) echo -e "${RED}Opción inválida.${NC}"; sleep 2 ;;
         esac
         echo -ne "${GREEN}Presiona Enter para continuar...${NC}"
@@ -72,8 +63,8 @@ menu_software() {
         read subopcion
 
         case $subopcion in
-            1) bash ./MODULOS/updateSyst.sh ;;
-            2) bash ./MODULOS/esenciales.sh ;;
+            1) bash "$MODULOS_DIR/updateSyst.sh" ;;
+            2) bash "$MODULOS_DIR/esenciales.sh" ;;
             3) break ;;
             *) echo -e "${RED}Opción inválida.${NC}"; sleep 2 ;;
         esac
@@ -96,9 +87,9 @@ menu_info() {
         read subopcion
 
         case $subopcion in
-            1) bash ./MODULOS/check.sh ;;
-            2) bash ./MODULOS/comandos.sh ;;
-            3) bash ./MODULOS/diagnostic.sh ;;
+            1) bash "$MODULOS_DIR/check.sh" ;;
+            2) bash "$MODULOS_DIR/comandos.sh" ;;
+            3) bash "$MODULOS_DIR/diagnostic.sh" ;;
             4) break ;;
             *) echo -e "${RED}Opción inválida.${NC}"; sleep 2 ;;
         esac
@@ -121,9 +112,9 @@ menu_seguridad() {
         read subopcion
 
         case $subopcion in
-            1) bash ./MODULOS/secure.sh ;;
-            2) bash ./MODULOS/clearsys.sh ;;
-            3) bash ./MODULOS/backup.sh ;;
+            1) bash "$MODULOS_DIR/secure.sh" ;;
+            2) bash "$MODULOS_DIR/clearsys.sh" ;;
+            3) bash "$MODULOS_DIR/backup.sh" ;;
             4) break ;;
             *) echo -e "${RED}Opción inválida.${NC}"; sleep 2 ;;
         esac
@@ -159,7 +150,7 @@ while true; do
         2) menu_gamer ;;
         3) menu_info ;;
         4) menu_seguridad ;;
-        5) bash ./MODULOS/EasyNuxUP.sh
+        5) bash "$MODULOS_DIR/EasyNuxUP.sh"
            echo -ne "${GREEN}Presiona Enter para volver al menú...${NC}"
            read
            ;;

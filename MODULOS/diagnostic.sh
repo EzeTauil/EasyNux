@@ -1,32 +1,11 @@
 #!/bin/bash
 
-# === COLORES ===
-GREEN="\e[1;32m"
-YELLOW="\e[1;33m"
-RED="\e[1;31m"
-RESET="\e[0m"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$SCRIPT_DIR/common.sh"
 
 clear
 
 echo -e "${YELLOW}Centro de Diagnóstico Avanzado:${RESET}"
-
-# Detectar distro
-DISTRO=$(source /etc/os-release && echo $ID)
-
-instalar_paquete() {
-    case $DISTRO in
-        ubuntu|debian|linuxmint)
-            sudo apt update && sudo apt install -y $1 ;;
-        fedora)
-            sudo dnf install -y $1 ;;
-        arch|manjaro)
-            sudo pacman -Sy --noconfirm $1 ;;
-        opensuse*)
-            sudo zypper install -y $1 ;;
-        *)
-            echo -e "${RED}Distribución no soportada para instalación automática.${RESET}" ;;
-    esac
-}
 
 while true; do
     echo ""
