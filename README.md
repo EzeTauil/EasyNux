@@ -1,70 +1,120 @@
-# EasyNux
-
-Domina Linux paso a paso 📄🚀
-
-EasyNux es una herramienta interactiva diseñada para usuarios que se inician en el mundo Linux. Automatiza tareas comunes y facilita la instalación de paquetes esenciales, drivers, herramientas de rendimiento y conceptos básicos del sistema.
-
-## Características principales
-
-* ✅ Actualización del sistema con un solo clic.
-* ✅ Instalación de herramientas esenciales como wget, curl, git, pip, etc.
-* ✅ Instalación de drivers de video (y herramientas gaming como Steam, Lutris, Heroic).
-* ✅ Visualización de información del sistema (RAM, CPU, disco, GPU).
-* ✅ Módulo de aprendizaje de comandos básicos de Linux.
-* ✅ Actualizador automático de EasyNux mediante Git.
-
-## Instalación
-
-### Paso 1 - Clonar el repositorio
-
-```bash
-git clone https://github.com/EzeTauil/EasyNux.git
-cd EasyNux
+```
+███████╗ █████╗ ███████╗██╗   ██╗███╗   ██╗██╗   ██╗██╗  ██╗
+██╔════╝██╔══██╗██╔════╝╚██╗ ██╔╝████╗  ██║██║   ██║╚██╗██╔╝
+█████╗  ███████║███████╗ ╚████╔╝ ██╔██╗ ██║██║   ██║ ╚███╔╝ 
+██╔══╝  ██╔══██║╚════██║  ╚██╔╝  ██║╚██╗██║██║   ██║ ██╔██╗ 
+███████╗██║  ██║███████║   ██║   ██║ ╚████║╚██████╔╝██╔╝ ██╗
+╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝
 ```
 
-### Paso 2 - Dar permisos de ejecución
+<div align="center">
 
-```bash
-chmod +x easy_nux.sh
-chmod +x MODULOS/*.sh
-```
+**Dominá Linux paso a paso 🐧🚀**
 
-### Paso 3 - Ejecutar la herramienta
+![Bash](https://img.shields.io/badge/Bash-4.0%2B-green?style=for-the-badge&logo=gnubash)
+![Linux](https://img.shields.io/badge/Linux-Debian%2FUbuntu-orange?style=for-the-badge&logo=linux)
+![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
 
-```bash
-./easy_nux.sh
-```
+*Herramienta interactiva en Bash para usuarios que se inician en Linux.*  
+*Automatizá tareas, instalá paquetes y aprendé el sistema desde un menú simple.*
 
-## Requisitos
-
-* Distribución basada en Debian/Ubuntu (Kubuntu, Xubuntu, Linux Mint, etc.)
-* Conexión a internet para instalar paquetes
-
-## Estructura del proyecto
-
-```bash
-EasyNux/
-├── easy_nux.sh                  # Script principal
-├── MODULOS/                     # Scripts individuales por función
-│   ├── updateSyst.sh
-│   ├── esenciales.sh
-│   ├── optlinuxV2.sh
-│   ├── check.sh
-│   ├── comandos.sh
-│   └── EasyNuxUP.sh
-```
-Sistema de actualizaciones
-
-EasyNux detecta si hay cambios locales en los archivos antes de realizar una actualización desde GitHub. Si hay modificaciones en los scripts locales, se le pregunta al usuario si desea forzar la actualización (sobrescribiendo los cambios) o cancelar la operación para conservar su versión actual.
-
-Esto protege la integridad de los datos del usuario, pero permite mantener EasyNux siempre actualizado con un simple clic.
-
-## Créditos
-
-Desarrollado por **BlackSec** ( EzeTauil ).
+</div>
 
 ---
 
-Si querés colaborar, podés hacer un fork, abrir un issue o sugerir mejoras.
+## 📸 Screenshot
 
-☕ Hecho con pasión para hacer Linux más accesible.
+### 🟢 Menú principal
+
+![idle](screenshot/idle.png)
+
+---
+
+## ⚡ ¿Qué es EasyNux?
+
+**EasyNux** es una herramienta en Bash pensada para quienes dan sus primeros pasos en Linux. En vez de googlear cada comando o arriesgarse a romper el sistema, EasyNux te ofrece un menú interactivo desde el que podés actualizar, instalar, configurar y aprender — todo en un solo lugar.
+
+---
+
+## 🧠 Funcionalidades
+
+| Módulo | Descripción |
+|---|---|
+| 🔄 **Actualización del sistema** | Actualizá paquetes con un solo paso |
+| 📦 **Herramientas esenciales** | Instalá `wget`, `curl`, `git`, `pip` y más de una vez |
+| 🎮 **Drivers y gaming** | Drivers de video + Steam, Lutris y Heroic Games Launcher |
+| 📊 **Info del sistema** | Visualizá RAM, CPU, disco y GPU en tiempo real |
+| 📚 **Aprendizaje de comandos** | Módulo interactivo para aprender comandos básicos de Linux |
+| 🔁 **Auto-actualización** | EasyNux se actualiza solo desde GitHub con detección de cambios locales |
+
+---
+
+## 📦 Instalación
+
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/EzeTauil/EasyNux.git
+cd EasyNux
+
+# 2. Dar permisos de ejecución
+chmod +x easy_nux.sh
+chmod +x MODULOS/*.sh
+
+# 3. Ejecutar
+./easy_nux.sh
+```
+
+---
+
+## 🖥️ Requisitos
+
+- Distribución basada en **Debian / Ubuntu** (Kubuntu, Xubuntu, Linux Mint, etc.)
+- Bash 4.0+
+- Conexión a internet para instalar paquetes
+
+---
+
+## 📁 Estructura del proyecto
+
+```
+EasyNux/
+├── easy_nux.sh              # Script principal — menú interactivo
+└── MODULOS/                 # Módulos individuales por función
+    ├── updateSyst.sh        # Actualización del sistema
+    ├── esenciales.sh        # Herramientas esenciales
+    ├── optlinuxV2.sh        # Drivers y opciones gaming
+    ├── check.sh             # Info del sistema
+    ├── comandos.sh          # Módulo de aprendizaje
+    └── EasyNuxUP.sh         # Auto-actualización desde GitHub
+```
+
+---
+
+## 🔁 Sistema de actualización inteligente
+
+EasyNux detecta si tenés cambios locales en los archivos **antes** de actualizar desde GitHub. Si encontrás modificaciones, te pregunta si querés:
+
+- ✅ **Forzar la actualización** — sobreescribe con la versión más reciente del repo
+- ❌ **Cancelar** — conserva tu versión actual sin tocar nada
+
+Así nunca perdés cambios sin querer, pero siempre podés tener EasyNux actualizado con un clic.
+
+---
+
+## ⚠️ Disclaimer
+
+> EasyNux está pensado para entornos de escritorio personales y aprendizaje.  
+> Usalo en tu propio sistema. El autor no se responsabiliza por cambios no deseados en el sistema.
+
+---
+
+## 👤 Autor
+
+**Dexlor** — [@EzeTauil](https://github.com/EzeTauil)
+
+---
+
+<div align="center">
+<sub>Hecho con 🐧 para hacer Linux más accesible</sub>
+</div>
